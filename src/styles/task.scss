@@ -1,0 +1,22 @@
+.task-action {
+    cursor: pointer;
+}
+
+.card-body{
+    height: 500px;
+}
+
+.card-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.individual-card{
+    max-width: 18rem;
+    margin: 10px;
+    padding: 10px;
+}
+
+i{
+    margin: 3px;
+}
