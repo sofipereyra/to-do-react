@@ -48,7 +48,7 @@ const RegisterFormik = () => {
 
     return (
         <div>
-            <h4>Register Form</h4>
+            <h4 className='title'>Register Form</h4>
             <Formik
                 initialValues={initialCredentials}
                 validationSchema={registerSchema}
@@ -59,9 +59,10 @@ const RegisterFormik = () => {
             >
                 {({ errors, touched, isSubmitting }) => (
 
-                    <Form>
+                    <Form className='form'>
                         <label htmlFor='userName'>Name</label>
                         <Field
+                            className='input-form'
                             id='userName'
                             name='userName'
                             type='text'
@@ -77,6 +78,7 @@ const RegisterFormik = () => {
 
                         <label htmlFor='email'>Email</label>
                         <Field
+                            className='input-form'
                             id='email'
                             name='email'
                             type='email'
@@ -92,6 +94,7 @@ const RegisterFormik = () => {
 
                         <label htmlFor='password'>Password</label>
                         <Field
+                            className='input-form'
                             id='password'
                             name='password'
                             type='password'
@@ -107,6 +110,7 @@ const RegisterFormik = () => {
 
                         <label htmlFor='confirm'>Confirm password</label>
                         <Field
+                            className='input-form'
                             id='confirm'
                             name='confirm'
                             type='password'
@@ -119,7 +123,7 @@ const RegisterFormik = () => {
                                 <ErrorMessage name='confirm' component='div'></ErrorMessage>
                             )
                         }
-                        <button type='submit'>Register Account</button>
+                        <button className='btn-form' type='submit'>Register Account</button>
                         {isSubmitting ? (<p>Sending your credentials...</p>) : null}
                     </Form>
                 )}

@@ -20,8 +20,8 @@ const LoginFormik = () => {
   }
 
   return (
-    <div>
-      <h4>Login</h4>
+    <div >
+      <h4 className='title'>Login</h4>
       <Formik
         initialValues={initialCredentials}
         validationSchema={loginSchema}
@@ -32,13 +32,15 @@ const LoginFormik = () => {
       >
 
         {({ errors, touched, isSubmitting }) => (
-          <Form>
+          <Form className='form'>
             <label htmlFor='email'>Email</label>
             <Field
+              className = 'input-form'
               id='email'
               name='email'
               type='email'
-              placeholder='Enter your Email'>
+              placeholder='Enter your Email'
+              >
             </Field>
             {
               errors.email && touched.email &&
@@ -48,6 +50,7 @@ const LoginFormik = () => {
             }
             <label htmlFor='password'>Password</label>
             <Field
+              className = 'input-form'
               id='password'
               name='password'
               type='password'
@@ -59,7 +62,7 @@ const LoginFormik = () => {
                 <ErrorMessage name='password'  component='div'></ErrorMessage>
               )
             }
-            <button type='submit'>Login</button>
+            <button className = 'btn-form' type='submit'>Login</button>
             {isSubmitting ? (<p>Login...</p>) : null}
           </Form>
         )}

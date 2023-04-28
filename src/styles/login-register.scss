@@ -1,0 +1,24 @@
+.title{
+    text-align: center;
+    background-color: burlywood;
+    padding: 10px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: auto;
+}
+.input-form{
+    margin: 10px 0 10px 0;
+}
+.link{
+    display: flex;
+    justify-content: center;
+    color: chocolate;
+}
+.btn-form{
+    background-color: burlywood;
+    border-radius: 10px;
+    border: none;
+}
